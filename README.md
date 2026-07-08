@@ -4,8 +4,6 @@
 
 Supports **Hugging Face, Ollama, LM Studio, Groq, and custom APIs** for both the teacher and the student - mix and match freely.
 
-[![Python](https://img.shields.io/badge/python-3.11-blue.svg)](https://www.python.org/)
-[![Streamlit](https://img.shields.io/badge/streamlit-app-red.svg)](https://streamlit.io/)
 ---
 
 ## Table of Contents
@@ -85,7 +83,7 @@ Your CSV → Teacher Model (annotates with reasoning + structured JSON) → Dist
 ## Installation
 
 ```bash
-git clone https://github.com/ravevx/universal-distillation-pipeline.git
+git clone https://github.com/ravevx/universal-dataset-distillation-pipeline.git
 cd universal-distillation-pipeline
 
 conda create -n distill-env python=3.11
