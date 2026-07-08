@@ -1,9 +1,11 @@
 # Universal Dataset Distillation Pipeline
 
-A no-code Streamlit app for **LLM knowledge distillation** - annotate any dataset with a large "teacher" model, then evaluate or fine-tune smaller "student" models via zero-shot, few-shot, or full weight updates. all from a single UI.
+> A no-code Streamlit app for **LLM knowledge distillation** - annotate any dataset with a large "teacher" model, then evaluate or fine-tune smaller "student" models via zero-shot, few-shot, or full weight updates. all from a single UI.
 
 Supports **Hugging Face, Ollama, LM Studio, Groq, and custom APIs** for both the teacher and the student - mix and match freely.
 
+[![Python](https://img.shields.io/badge/python-3.11-blue.svg)](https://www.python.org/)
+[![Streamlit](https://img.shields.io/badge/streamlit-app-red.svg)](https://streamlit.io/)
 ---
 
 ## Table of Contents
