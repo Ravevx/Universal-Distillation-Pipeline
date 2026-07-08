@@ -148,20 +148,4 @@ Causal LM fine-tuning masks prompt tokens so loss is only computed on the target
 ```
 ---
 
-## Key Concepts
-
-- **Zero-shot**: student model receives the exact same instruction as the teacher, with no examples - tests raw out-of-the-box capability.
-- **Few-shot**: a handful of real annotated examples from your distilled dataset are injected into the student's prompt before inference - no weights change, but performance often improves.
-- **Fine-tuning**: the student model's actual weights are updated via gradient descent on your distilled dataset (Hugging Face path only) - the most reliable way to specialize a small model on your specific task.
-
----
-
-## License
-
-MIT License - feel free to use, modify, and distribute.
-
----
-
-## Contributing
-
 Issues and pull requests are welcome. If you add support for a new backend or model architecture, please update the tables above.
