@@ -37,27 +37,27 @@ Supports **Hugging Face, Ollama, LM Studio, Groq, and custom APIs** for both the
 ### 1. Upload & Explore Dataset
 Upload any CSV and instantly see a preview and column-level stats (dtype, non-null counts, unique values).
 
-<img src="assests/dataset_page.png" alt="Dataset Overview" width="700"/>
+<img src="assests/dataset_page.png" alt="Dataset Overview" width="1000"/>
 
 ### 2. Configure Teacher & Run Distillation
 Pick your teacher backend, task type, the column to distill (X features), an optional group/target column (Y target), server URL / model name, and how many rows to annotate. Once done, download the distilled dataset as CSV or JSONL.
 
-<img src="assests/distil_dataset.png" alt="Distillation Setup" width="700"/>
+<img src="assests/distil_dataset.png" alt="Distillation Setup" width="1000"/>
 
 ### 3. Student Evaluation - Prompt-Based (Zero-shot / Few-shot)
 For Ollama, LM Studio, or custom API students: pick zero-shot (same prompt as teacher, no examples) or few-shot (auto-injects real annotated examples into the prompt), set held-out sample size, and choose which JSON field to score accuracy on.
 
-<img src="assests/train_student_instrction_based.png" alt="Instruction-Based Student Evaluation" width="700"/>
+<img src="assests/train_student_instrction_based.png" alt="Instruction-Based Student Evaluation" width="1000"/>
 
 ### 4. Student Training - Hugging Face Fine-Tuning
 For Hugging Face students: pick an open-source model, it loads automatically, and you set epochs, batch size, and learning rate. The model is actually fine-tuned (weights updated) on your distilled dataset - works with both T5-family (seq2seq) and causal LMs (Qwen, Mistral, DeepSeek-R1-Distill).
 
-<img src="assests/train_huggingface_finetune.png" alt="Hugging Face Fine-Tuning" width="700"/>
+<img src="assests/train_huggingface_finetune.png" alt="Hugging Face Fine-Tuning" width="1000"/>
 
 ### 5. Teacher vs. Student Evaluation
 Compare outputs side-by-side with aggregate metrics (avg similarity, exact match rate, valid JSON %) plus field-level accuracy on your chosen target field (e.g. `claim`).
 
-<img src="assests/eval_teacher_vs_student.png" alt="Evaluation Results" width="700"/>
+<img src="assests/eval_teacher_vs_student.png" alt="Evaluation Results" width="1000"/>
 
 ---
 
