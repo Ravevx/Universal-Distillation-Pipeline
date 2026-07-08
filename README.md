@@ -65,8 +65,8 @@ Compare outputs side-by-side with aggregate metrics (avg similarity, exact match
 
 ```
 Your CSV → Teacher Model (annotates with reasoning + structured JSON) → Distilled Dataset
-                             │
-┌────────────────────────────┴─────────────────────────────────────────────────────┐
+                                                                               │
+┌──────────────────────────────────────────────────────────────────────────────┴───┐
 │                                                                                  │
 │     Student: Prompt-based eval Student: Hugging Face fine-tuning                 │
 │     (Ollama / LM Studio / Custom API) (real weight updates via PyTorch)          │
