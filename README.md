@@ -8,8 +8,6 @@ Supports **Groq, Ollama, LM Studio, Hugging Face, and custom APIs** for both the
 
 ## Table of Contents
 
-## Table of Contents
-
 - [Features](#features)
 - [Screenshots](#screenshots)
 - [How It Works](#how-it-works)
