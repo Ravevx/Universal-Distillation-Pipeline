@@ -6,6 +6,21 @@ Supports **Groq, Ollama, LM Studio, Hugging Face, and custom APIs** for both the
 
 ---
 
+## Table of Contents
+
+## Table of Contents
+
+- [Features](#features)
+- [Screenshots](#screenshots)
+- [How It Works](#how-it-works)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Supported Backends](#supported-backends)
+- [Supported Student Model Architectures (Fine-Tuning)](#supported-student-model-architectures-fine-tuning)
+- [Project Structure](#project-structure)
+
+
+---
 ## Features
 
 - **Bring your own dataset** - upload any CSV, pick which column to distill and which column (if any) is your target/group label.
@@ -19,25 +34,6 @@ Supports **Groq, Ollama, LM Studio, Hugging Face, and custom APIs** for both the
 - **Export everything** - download your distilled dataset as CSV or JSONL at any point.
 
 ---
-
-## How It Works
-
-```
-Your CSV → Teacher Model (annotates with reasoning + structured JSON) → Distilled Dataset
-                             │
-┌────────────────────────────┴─────────────────────────────────────────────────────┐
-│                                                                                  │
-│     Student: Prompt-based eval Student: Hugging Face fine-tuning                 │
-│     (Ollama / LM Studio / Custom API) (real weight updates via PyTorch)          │
-│Zero-shot or Few-shot, no training T5 seq2seq or causal LM (Qwen/Mistral/DeepSeek)│
-│                                                                                  │
-└────────────────────────────┬─────────────────────────────────────────────────────┘
-                             ▼
-                 Teacher vs. Student Metrics
-         (similarity, exact match, valid JSON %, field accuracy)
-```
----
-
 ## Screenshots
 
 ### 1. Upload & Explore Dataset
@@ -64,6 +60,25 @@ For Hugging Face students: pick an open-source model, it loads automatically, an
 Compare outputs side-by-side with aggregate metrics (avg similarity, exact match rate, valid JSON %) plus field-level accuracy on your chosen target field (e.g. `claim`).
 
 <img src="assests/eval_teacher_vs_student.png" alt="Evaluation Results" width="700"/>
+
+---
+
+## How It Works
+
+```
+Your CSV → Teacher Model (annotates with reasoning + structured JSON) → Distilled Dataset
+                             │
+┌────────────────────────────┴─────────────────────────────────────────────────────┐
+│                                                                                  │
+│     Student: Prompt-based eval Student: Hugging Face fine-tuning                 │
+│     (Ollama / LM Studio / Custom API) (real weight updates via PyTorch)          │
+│Zero-shot or Few-shot, no training T5 seq2seq or causal LM (Qwen/Mistral/DeepSeek)│
+│                                                                                  │
+└────────────────────────────┬─────────────────────────────────────────────────────┘
+                             ▼
+                 Teacher vs. Student Metrics
+         (similarity, exact match, valid JSON %, field accuracy)
+```
 
 ---
 
