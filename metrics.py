@@ -1,4 +1,3 @@
-# metrics.py
 """
 Compares teacher (annotation-time) outputs vs. student (trained model)
 outputs on a held-out sample. Supports both whole-JSON similarity (legacy)
